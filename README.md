@@ -84,14 +84,6 @@ It works on both desktop and mobile, and it also shows instructions for the slug
 4. Click download.
 5. Wait until the PDF is created.
 
-## Slug help
-
-If you do not know the slug, open the Rekhta book page in the browser and copy the last part of the URL. That last part is the slug.
-
-Example:
-
-- if the URL is something like `https://www.site.com/ebooks/some-book-name`
-- then `some-book-name` is the slug
 
 ## Final result
 
