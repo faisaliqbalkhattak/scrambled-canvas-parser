@@ -85,7 +85,7 @@ If you do not know the slug, open the Rekhta book page in the browser and copy t
 
 Example:
 
-- if the URL is something like `https://www.rekhta.org/ebooks/some-book-name`
+- if the URL is something like `https://www.site.com/ebooks/some-book-name`
 - then `some-book-name` is the slug
 
 ## Final result
