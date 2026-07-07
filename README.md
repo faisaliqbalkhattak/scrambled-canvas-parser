@@ -1,8 +1,13 @@
-# Rekhta Books Downloader
+# Books Downloader
 
 This project was basically an exploration of how book preview websites work and what kind of data they return.
 
 While looking into Rekhta books, I noticed that the pages are not given as normal clean images at first. The images come scrambled. Then another request from the API gives the mapping data that tells how the scrambled pieces should be arranged back into the real page. After understanding this, I built the logic to unscramble the image and restore the original page.
+
+## Copy rights and Privacy Notice
+- It is not legal to download books from Rekhta, that is why I have not pushed the actuall backend code to the repo.
+- The frontend code is the only functional code here.
+- The backend is just a blue print and is not a working copy of the orignal work I have done.
 
 ## What this project does
 
