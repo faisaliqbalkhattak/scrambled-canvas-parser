@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloader</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+
+    <section id="downloader">
+        <h1>Rekha Books Downloader</h1>
+        <div class="input-container">
+            <input type="text" id="slug-input" placeholder=" ">
+            <label for="slug-input">Book name / slug</label>
+        </div>
+
+        <button id="download-button">Download</button>
+        
+        
+        <progress id="progress-bar" value="0" max="100"></progress>
+        <p id="progress-text">Ready</p>
+        
+        <h3 id="slug-help" style="font-weight:lighter"> Not sure what is slug and how to get it <span id="slug-instruction"
+                style="font-weight:bold ;">click here</span></h3>
+        <div id="instruction">
+            <p>Go to any serach engine, write the name of the book you want to donwload. On the results
+            page look for links from rekhta website. Then go to the link the search engine has returned and make sure
+            that your are looking at the correct book you want to donwload. Copy the last part of the URL that is being shown in the
+            browser, this is your slug.</p>
+            <button id="hide-instruction-btn">Hide Instructions</button>
+        </div>
+
+    </section>
+    <div id="images-container">
+        <h2 id="image">Downloading and Processing Images</h2>
+        <section id="images">
+           <div id="raw">
+                <h2>Scrambled Images</h2>
+                <img id="raw-img" src="raw/urdu-scrambled.png" alt="Waiting...">
+            </div>
+            <div id="restored">
+                <h2>Processed Images</h2>
+                <img id="restored-img" src="restored/urdu-restored.png" alt="Waiting...">
+            </div>
+        </section>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

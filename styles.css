@@ -1,0 +1,339 @@
+* {
+    box-sizing: border-box;
+    color:rgb(142, 47, 3)
+}
+
+/* whole body  spans in two columns*/
+body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* one column is for information entry and feedback */
+#downloader {
+    width: 50%
+}
+
+/* other is for visual feedback */
+#images-container {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+/* images are staked in two column inside container */
+#images {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+
+/* both images have a heading at top and image below it */
+#raw,
+#restored {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* images width */
+#raw-img,
+#restored-img {
+    width: 250px;
+    height: auto;
+}
+
+/* center image */
+#image {
+    display: flex;
+    align-self: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* input container contians the label and input area */
+.input-container {
+
+    position: relative;
+    width: 70%;
+    margin: 70px auto 20px;
+}
+
+/* input box */
+.input-container input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    background: transparent;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+/* position the placeholder inside container */
+.input-container label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    background-color: #ffffff;
+    padding: 0 5px;
+    color: #070707;
+    font-size: 16px;
+    transition: 0.2s ease all;
+    pointer-events: none;
+}
+
+/* Trigger label float when input is focused OR when input is not empty */
+.input-container input:focus~label,
+.input-container input:not(:placeholder-shown)~label {
+    top: 0;
+    font-size: 12px;
+    color: #1a73e8;
+}
+/* change the border of the input box when clicked inside */
+.input-container input:focus {
+    border: 2px solid #1a73e8;
+}
+
+/* simple button */
+button {
+    display: block;
+    width: 30%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* focused */
+button:focus {
+    outline: none;
+}
+
+
+
+
+
+/* instruction for someOne who does not know what is slug and how to get it. */
+#slug-instruction {
+    color: rgb(255, 81, 0);
+    cursor: pointer;
+}
+#slug-instruction:hover {
+    text-decoration: underline;
+}
+/* use hide and show javaScript. so the instructions are only shown when some one clicks on the link */
+/* defaule not shown */
+#instruction {
+    display: none;
+    width: 70%;
+    margin: 10px auto;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Styling for the instruction hide button specifically */
+#hide-instruction-btn {
+    width: auto;
+    margin: 10px auto 0 auto;
+    padding: 5px 15px;
+    font-size: 12px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* progress bar */
+progress {
+    width: 100%;
+    height: 25px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+/* Styling for Chrome, Safari, and newer Edge */
+progress::-webkit-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+}
+
+/* progress bar color */
+progress::-webkit-progress-value {
+    background-color: rgb(142, 47, 3);
+    border-radius: 8px;
+}
+
+/* Styling for Firefox */
+progress::-moz-progress-bar {
+    background-color: rgb(142, 47, 3);
+    border-radius: 8px;
+}
+
+/* text below progress bar */
+#progress-text {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* responsive design */
+@media (max-width: 768px) {
+    
+    body {
+        flex-direction: column;
+        width: 100%;
+       max-height: 100vh;
+        padding: 12px;
+    }
+
+    #downloader {
+        height: 50vh;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 12px;
+    }
+
+    #downloader h1 {
+        align-items: center;
+        align-content: flex-start;
+        margin: 0 0 8px 0;
+        overflow: auto;
+    }
+
+    #images-container {
+        height: 50vh;
+        width: 100%;
+        margin: 0 0 12px 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        overflow: hidden;
+    }
+
+    #images-container #image {
+        width: 100%;
+        text-align: center;
+    }
+
+    #images {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    #raw,
+    #restored {
+        width: 48%;
+    }
+
+    #raw-img,
+    #restored-img {
+        width: 100%;
+        height: auto;
+        max-height: 28vh;
+        object-fit: contain;
+    }
+
+    
+    .input-container {
+        width: 70%;
+        display: inline-block;
+        margin: 0;
+        }
+
+    .input-container input {
+        width: 100%;
+        margin: 0;
+        font-size: 15px;
+    }
+
+    .input-container label {
+        font-size: 14px;
+    }
+
+
+    button {
+        display: inline-block;
+        width: 28%;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 0;
+    }
+
+    button:focus {
+        outline: none;
+        margin: 7px 0;
+
+    }
+
+    h2{
+        font-size: 18px;
+        margin: 7px 0;;
+    }
+
+    #progress-bar,
+    #slug-instruction,
+    #instruction {
+        width: 100%;
+        order: 10;
+    }
+
+    #progress-bar {
+        display: inline;
+    }
+
+    #progress-text {
+        margin: 6px 0 0;
+        text-align: center;
+    }
+
+    #slug-instruction {
+        display: inline;
+        text-align: center;
+    }
+
+    #slug-help {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0 0;
+    }
+
+    #instruction {
+        margin-top: 8px;
+    }
+
+
+
+    #slug-instruction {
+        color: rgb(255, 81, 0);
+        cursor: pointer;
+    }
+    #slug-instruction:hover {
+        text-decoration: underline;
+    }
+
+
+    progress {
+        height: 20px;
+    }
+}
