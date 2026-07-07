@@ -57,7 +57,7 @@ The frontend has an orange theme and a responsive layout.
 
 It works on both desktop and mobile, and it also shows instructions for the slug in case someone does not know what slug means or where to find it.
 
-### Features
+## Features
 
 * **Reverse-Engineered Matrix Stitching:** Translates coordinate arrays via Pillow to programmatically copy and patch image segments back into their original spatial order.
 * **Multi-Threaded Performance:** Runs parallel fetch and processing workloads across all available CPU cores to overcome network and disk I/O bottlenecks.
